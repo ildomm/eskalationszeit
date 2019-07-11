@@ -4,6 +4,8 @@ package restapi
 
 import (
 	"crypto/tls"
+	"log"
+	"math/rand"
 	"net/http"
 
 	errors "github.com/go-openapi/errors"
@@ -28,22 +30,20 @@ func configureAPI(api *operations.PreisAPI) http.Handler {
 	// Expected interface func(string, ...interface{})
 	//
 	// Example:
-	// api.Logger = log.Printf
+	api.Logger = log.Printf
 
 	api.JSONConsumer = runtime.JSONConsumer()
-
 	api.JSONProducer = runtime.JSONProducer()
+	
+	api.PriceGetPriceHandler = price.GetPriceHandlerFunc(func(params price.GetPriceParams) middleware.Responder {
+		priceSuggestion := 10 + rand.Float32()*(99-10)
+		body := price.GetPriceOKBody{Price:priceSuggestion}
+		return price.NewGetPriceOK().WithPayload(&body)
+	})
 
-	if api.PriceGetPriceHandler == nil {
-		api.PriceGetPriceHandler = price.GetPriceHandlerFunc(func(params price.GetPriceParams) middleware.Responder {
-			return middleware.NotImplemented("operation price.GetPrice has not yet been implemented")
-		})
-	}
-	if api.OptionsAllowHandler == nil {
-		api.OptionsAllowHandler = operations.OptionsAllowHandlerFunc(func(params operations.OptionsAllowParams) middleware.Responder {
-			return middleware.NotImplemented("operation .OptionsAllow has not yet been implemented")
-		})
-	}
+	api.OptionsAllowHandler = operations.OptionsAllowHandlerFunc(func(params operations.OptionsAllowParams) middleware.Responder {
+		return operations.NewOptionsAllowOK()
+	})
 
 	api.ServerShutdown = func() {}
 
