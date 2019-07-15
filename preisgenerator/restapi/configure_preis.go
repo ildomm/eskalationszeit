@@ -4,13 +4,13 @@ package restapi
 
 import (
 	"crypto/tls"
+	"github.com/go-openapi/errors"
+	"github.com/go-openapi/runtime"
+	"github.com/go-openapi/runtime/middleware"
 	"log"
 	"math/rand"
 	"net/http"
-
-	errors "github.com/go-openapi/errors"
-	runtime "github.com/go-openapi/runtime"
-	middleware "github.com/go-openapi/runtime/middleware"
+	"net/http/httputil"
 
 	"github.com/ildomm/eskalationszeit/preisgenerator/restapi/operations"
 	"github.com/ildomm/eskalationszeit/preisgenerator/restapi/operations/price"
@@ -70,6 +70,27 @@ func setupMiddlewares(handler http.Handler) http.Handler {
 
 // The middleware configuration happens before anything, this middleware also applies to serving the swagger.json document.
 // So this is a good place to plug in a panic handling middleware, logging and metrics
-func setupGlobalMiddleware(handler http.Handler) http.Handler {
+func xsetupGlobalMiddleware(handler http.Handler) http.Handler {
 	return handler
+}
+
+
+func setupGlobalMiddleware(handler http.Handler) http.Handler {
+	log.Println("Setup GlobalMiddleware")
+
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Access-Control-Allow-Origin", "*")
+		w.Header().Set("Access-Control-Allow-Credentials", "true")
+		w.Header().Set("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT, PATCH, OPTIONS")
+		w.Header().Set("Access-Control-Allow-Headers", "Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, X-Token")
+
+		dumpRequest, err := httputil.DumpRequest(r, true)
+		if err != nil {
+			log.Println(err)
+		} else {
+			log.Printf("RemoteAddr: "+r.RemoteAddr+", Request: %q", dumpRequest)
+		}
+
+		handler.ServeHTTP(w, r)
+	})
 }

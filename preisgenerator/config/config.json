@@ -1,0 +1,14 @@
+{
+  "runtime": {
+    "project": "preisgenerator",
+    "port": 80,
+    "host": "0.0.0.0"
+  },
+  "logger": {
+    "base_path": "/src/github.com/ildomm/eskalationszeit/log/",
+    "max_size": 100,
+    "max_backups": 3,
+    "max_age": 365,
+    "compress": true
+  }
+}
