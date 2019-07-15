@@ -1,7 +1,7 @@
 package utils
 
 import (
-	"github.com/ildomm/linx_challenge/config"
+	"github.com/ildomm/eskalationszeit/preisgenerator/config"
 	"github.com/natefinch/lumberjack"
 	"go/build"
 	"io"
