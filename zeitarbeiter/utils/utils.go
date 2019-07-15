@@ -1,12 +1,14 @@
 package utils
 
 import (
-	"github.com/ildomm/eskalationszeit/preisgenerator/config"
+	"github.com/ildomm/eskalationszeit/zeitarbeiter/config"
 	"github.com/natefinch/lumberjack"
 	"go/build"
 	"io"
 	"log"
 	"os"
+	"os/signal"
+	"syscall"
 )
 
 func SetupLogger(filename string) {
@@ -32,4 +34,18 @@ func SetupLogger(filename string) {
 	// https://www.ardanlabs.com/blog/2013/11/using-log-package-in-go.html
 	multi := io.MultiWriter(rotate, os.Stdout)
 	log.SetOutput(multi)
+}
+
+func SignalNotify() {
+	c := make(chan os.Signal)
+	signal.Notify(c, os.Interrupt, syscall.SIGTERM)
+	go func() {
+		<-c
+		cleanup()
+		os.Exit(1)
+	}()
+}
+
+func cleanup() {
+	log.Println("Shutting down...")
 }

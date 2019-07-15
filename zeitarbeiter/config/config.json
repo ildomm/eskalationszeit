@@ -1,0 +1,18 @@
+{
+  "runtime": {
+    "project": "zeitarbeiter",
+    "refresh_seconds": 60
+  },
+  "database": {
+    "host": "localhost",
+    "port": "6379",
+    "database": "0"
+  },
+  "logger": {
+    "base_path": "/src/github.com/ildomm/eskalationszeit/log/",
+    "max_size": 100,
+    "max_backups": 3,
+    "max_age": 365,
+    "compress": true
+  }
+}
