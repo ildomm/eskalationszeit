@@ -1,0 +1,164 @@
+2019/07/15 21:42:03 Starting worker Zeitarbeiter
+2019/07/15 21:42:03 Connecting database
+2019/07/15 21:42:03 Redis: localhost:6379
+2019/07/15 21:42:03 &{  USD <nil>}
+2019/07/15 21:42:03 &{  BTC <nil>}
+2019/07/15 21:42:03 &{  NZD <nil>}
+2019/07/15 21:42:03 Next refresh in 60 seconds
+2019/07/15 21:43:03 &{  USD <nil>}
+2019/07/15 21:43:03 &{  BTC <nil>}
+2019/07/15 21:43:03 &{  NZD <nil>}
+2019/07/15 21:43:03 Next refresh in 60 seconds
+2019/07/15 21:44:03 &{  USD <nil>}
+2019/07/15 21:44:03 &{  BTC <nil>}
+2019/07/15 21:44:03 &{  NZD <nil>}
+2019/07/15 21:44:03 Next refresh in 60 seconds
+2019/07/15 21:45:03 &{  USD <nil>}
+2019/07/15 21:45:03 &{  BTC <nil>}
+2019/07/15 21:45:03 &{  NZD <nil>}
+2019/07/15 21:45:03 Next refresh in 60 seconds
+2019/07/15 21:46:03 &{  USD <nil>}
+2019/07/15 21:46:03 &{  BTC <nil>}
+2019/07/15 21:46:03 &{  NZD <nil>}
+2019/07/15 21:46:03 Next refresh in 60 seconds
+2019/07/15 21:47:03 &{  USD <nil>}
+2019/07/15 21:47:03 &{  BTC <nil>}
+2019/07/15 21:47:03 &{  NZD <nil>}
+2019/07/15 21:47:03 Next refresh in 60 seconds
+2019/07/15 21:48:03 &{  USD <nil>}
+2019/07/15 21:48:03 &{  BTC <nil>}
+2019/07/15 21:48:03 &{  NZD <nil>}
+2019/07/15 21:48:03 Next refresh in 60 seconds
+2019/07/15 21:48:08 Shutting down...
+2019/07/15 21:48:12 Starting worker Zeitarbeiter
+2019/07/15 21:48:12 Connecting database
+2019/07/15 21:48:12 Redis: localhost:6379
+2019/07/15 21:48:12 &{  USD <nil>}
+2019/07/15 21:48:19 Get http://localhost:80/v1/price: dial tcp [::1]:80: connectex: No connection could be made because the target machine actively refused it.
+2019/07/15 21:50:31 Starting worker Zeitarbeiter
+2019/07/15 21:50:31 Connecting database
+2019/07/15 21:50:31 Redis: localhost:6379
+2019/07/15 21:50:31 &{  USD <nil>}
+2019/07/15 21:50:41 [123 34 112 114 105 99 101 34 58 54 51 46 56 49 52 55 54 54 125 10]
+2019/07/15 21:50:42 {"price":63.814766}
+2019/07/15 21:53:28 Starting worker Zeitarbeiter
+2019/07/15 21:53:28 Connecting database
+2019/07/15 21:53:28 Redis: localhost:6379
+2019/07/15 21:53:28 &{  USD <nil>}
+2019/07/15 21:53:50 Shutting down...
+2019/07/15 21:54:20 Starting worker Zeitarbeiter
+2019/07/15 21:54:20 Connecting database
+2019/07/15 21:54:20 Redis: localhost:6379
+2019/07/15 21:54:20 &{  USD <nil>}
+2019/07/15 21:54:25 [123 34 112 114 105 99 101 34 58 54 51 46 56 49 52 55 54 54 125 10]
+2019/07/15 21:54:25 {"price":63.814766}
+2019/07/15 22:11:36 Starting worker Zeitarbeiter
+2019/07/15 22:11:36 Connecting database
+2019/07/15 22:11:36 Redis: localhost:6379
+2019/07/15 22:11:36 &{  USD <nil>}
+2019/07/15 22:15:36 Shutting down...
+2019/07/15 22:15:46 Starting worker Zeitarbeiter
+2019/07/15 22:15:46 Connecting database
+2019/07/15 22:15:46 Redis: localhost:6379
+2019/07/15 22:15:46 &{  USD <nil>}
+2019/07/15 22:16:59 Starting worker Zeitarbeiter
+2019/07/15 22:16:59 Connecting database
+2019/07/15 22:16:59 Redis: localhost:6379
+2019/07/15 22:16:59 &{  USD <nil>}
+2019/07/15 22:17:13 &{  BTC <nil>}
+2019/07/15 22:17:13 63.814766
+2019/07/15 22:17:14 Price convert USD to BTC = 63.81476593
+2019/07/15 22:17:22 &{  NZD <nil>}
+2019/07/15 22:17:22 93.70531
+2019/07/15 22:17:23 Price convert USD to NZD = 93.70530701
+2019/07/15 22:17:23 zadd azalea:market:currency:USD_to_NZD:k:1 1.563239843e+09 [91 49 44 57 51 46 55 48 53 51 48 55 48 48 54 56 51 53 57 52 93]: MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error.
+2019/07/15 22:19:53 Starting worker Zeitarbeiter
+2019/07/15 22:19:53 Connecting database
+2019/07/15 22:19:53 Redis: localhost:6379
+2019/07/15 22:19:53 MISCONF Redis is configured to save RDB snapshots, but is currently not able to persist on disk. Commands that may modify the data set are disabled. Please check Redis logs for details about the error.
+2019/07/15 22:20:46 Starting worker Zeitarbeiter
+2019/07/15 22:20:46 Connecting database
+2019/07/15 22:20:46 Redis: localhost:6379
+2019/07/15 22:20:46 &{  USD <nil>}
+2019/07/15 22:20:51 &{  BTC <nil>}
+2019/07/15 22:20:51 63.814766
+2019/07/15 22:20:52 Price convert USD to BTC = 63.81476593
+2019/07/15 22:21:00 &{  NZD <nil>}
+2019/07/15 22:21:01 93.70531
+2019/07/15 22:21:01 Price convert USD to NZD = 93.70530701
+2019/07/15 22:21:02 &{  BTC <nil>}
+2019/07/15 22:21:03 &{  USD <nil>}
+2019/07/15 22:21:04 69.14584
+2019/07/15 22:21:04 Price convert BTC to USD = 69.14584351
+2019/07/15 22:21:08 &{  NZD <nil>}
+2019/07/15 22:21:08 48.956562
+2019/07/15 22:21:09 Price convert BTC to NZD = 48.95656204
+2019/07/15 22:21:10 &{  NZD <nil>}
+2019/07/15 22:21:10 &{  USD <nil>}
+2019/07/15 22:21:10 47.792736
+2019/07/15 22:21:11 Price convert NZD to USD = 47.79273605
+2019/07/15 22:21:11 &{  BTC <nil>}
+2019/07/15 22:21:12 71.12726
+2019/07/15 22:21:12 Price convert NZD to BTC = 71.12725830
+2019/07/15 22:21:13 Next refresh in 60 seconds
+2019/07/15 22:21:44 Shutting down...
+2019/07/15 22:23:21 Starting worker Zeitarbeiter
+2019/07/15 22:23:21 Connecting database
+2019/07/15 22:23:21 Redis: localhost:6379
+2019/07/15 22:23:21 Price convert USD to BTC = 15.84169483
+2019/07/15 22:23:21 Price convert USD to NZD = 23.93021393
+2019/07/15 22:23:21 Price convert BTC to USD = 18.63028717
+2019/07/15 22:23:21 Price convert BTC to NZD = 36.78115845
+2019/07/15 22:23:21 Price convert NZD to USD = 55.85392761
+2019/07/15 22:23:21 Price convert NZD to BTC = 82.41395569
+2019/07/15 22:23:21 Next refresh in 60 seconds
+2019/07/15 22:24:21 Price convert USD to BTC = 29.06948471
+2019/07/15 22:24:21 Price convert USD to NZD = 43.87849045
+2019/07/15 22:24:21 Price convert BTC to USD = 38.30717468
+2019/07/15 22:24:21 Price convert BTC to NZD = 51.73119354
+2019/07/15 22:24:21 Price convert NZD to USD = 35.19004059
+2019/07/15 22:24:21 Price convert NZD to BTC = 36.08606720
+2019/07/15 22:24:21 Next refresh in 60 seconds
+2019/07/15 22:25:20 Shutting down...
+2019/07/15 22:29:09 Starting worker Zeitarbeiter
+2019/07/15 22:29:09 Connecting database
+2019/07/15 22:29:09 Redis: localhost:6379
+2019/07/15 22:29:09 Price convert USD to BTC = 70.43853760
+2019/07/15 22:29:09 Price convert USD to NZD = 29.45122147
+2019/07/15 22:29:09 Price convert BTC to USD = 28.08363152
+2019/07/15 22:29:09 Price convert BTC to NZD = 42.11755371
+2019/07/15 22:29:09 Price convert NZD to USD = 60.78992081
+2019/07/15 22:29:09 Price convert NZD to BTC = 86.76173401
+2019/07/15 22:29:09 Next refresh in 60 seconds
+2019/07/15 22:29:33 Shutting down...
+2019/07/15 22:30:50 Starting worker Zeitarbeiter
+2019/07/15 22:30:50 Connecting database
+2019/07/15 22:30:50 Redis: localhost:6379
+2019/07/15 22:30:50 Price convert USD to BTC = 36.08716583
+2019/07/15 22:30:50 Price convert USD to NZD = 36.44034958
+2019/07/15 22:30:50 Price convert BTC to USD = 76.97899628
+2019/07/15 22:30:50 Price convert BTC to NZD = 28.38585663
+2019/07/15 22:30:50 Price convert NZD to USD = 87.01481628
+2019/07/15 22:30:50 Price convert NZD to BTC = 72.00801086
+2019/07/15 22:30:50 Next refresh in 60 seconds
+2019/07/15 22:31:50 Price convert USD to BTC = 56.62000656
+2019/07/15 22:31:50 Price convert USD to NZD = 12.51897430
+2019/07/15 22:31:50 Price convert BTC to USD = 24.09121704
+2019/07/15 22:31:50 Price convert BTC to NZD = 64.04555511
+2019/07/15 22:31:50 Price convert NZD to USD = 96.79650116
+2019/07/15 22:31:50 Price convert NZD to BTC = 17.07137299
+2019/07/15 22:31:50 Next refresh in 60 seconds
+2019/07/15 22:32:50 Price convert USD to BTC = 62.93796539
+2019/07/15 22:32:50 Price convert USD to NZD = 15.26173782
+2019/07/15 22:32:50 Price convert BTC to USD = 71.59018707
+2019/07/15 22:32:50 Price convert BTC to NZD = 36.83551788
+2019/07/15 22:32:50 Price convert NZD to USD = 25.42069435
+2019/07/15 22:32:50 Price convert NZD to BTC = 58.15788651
+2019/07/15 22:32:50 Next refresh in 60 seconds
+2019/07/15 22:33:50 Price convert USD to BTC = 58.42984772
+2019/07/15 22:33:50 Price convert USD to NZD = 34.78717804
+2019/07/15 22:33:50 Price convert BTC to USD = 47.66054535
+2019/07/15 22:33:50 Price convert BTC to NZD = 57.22212601
+2019/07/15 22:33:50 Price convert NZD to USD = 32.56510162
+2019/07/15 22:33:50 Price convert NZD to BTC = 35.10520935
+2019/07/15 22:33:50 Next refresh in 60 seconds

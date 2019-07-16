@@ -1,7 +1,8 @@
 {
   "runtime": {
     "project": "zeitarbeiter",
-    "refresh_seconds": 60
+    "refresh_seconds": 60,
+    "generator_url" : "http://localhost:80/v1/price"
   },
   "database": {
     "host": "localhost",

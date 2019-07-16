@@ -21,7 +21,8 @@ type Configuration struct {
 
 type Runtime struct {
 	Project        string `json:"project"`
-	RefreshSeconds int `json:"refresh_seconds"`
+	RefreshSeconds int    `json:"refresh_seconds"`
+	GeneratorUrl   string `json:"generator_url"`
 }
 
 type Database struct {
