@@ -20,6 +20,8 @@ func main() {
 
 	for true {
 		logic.UpdatePrices()
+		logic.UpdateHistories()
+
 		log.Printf("Next refresh in %d seconds", config.App.Runtime.RefreshSeconds)
 
 		time.Sleep(time.Duration(config.App.Runtime.RefreshSeconds) * time.Second )
