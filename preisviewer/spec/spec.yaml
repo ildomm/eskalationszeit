@@ -1,0 +1,156 @@
+swagger: '2.0'
+info:
+  description: This is the api POC
+  version: 0.1.0
+  title: Go server price viwer API
+host: api.price.com
+basePath: /v1
+schemes:
+  - http
+consumes:
+  - application/json
+produces:
+  - application/json
+	
+paths:
+  /*:
+    options:
+      operationId: optionsAllow
+      security: []
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation
+  /currencies:
+    get:
+      summary: Get list of currencies
+      description: Get list of currencies
+      operationId: getCurrencies
+      responses:
+        '200':
+          description: Successful operation
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Currency'
+        '400':
+          description: Error
+          
+  /history:
+    get:
+      summary: Get currencies history
+      description: Get currencies history
+      operationId: getCurrenciesHistory
+      parameters:
+        - type: string
+          description: 'Currencies symbols to request prices, separated by colons'
+          name: symbols
+          in: query
+          required: true
+        - type: string
+          description: Currency pair of price convertion
+          name: pair
+          in: query
+          required: true
+        - enum:
+            - '5'
+            - '15'
+            - '30'
+            - '60'
+            - '120'
+            - '720'
+            - 1D
+            - 1M
+            - 6M
+          type: string
+          description: Split window of values
+          name: period
+          in: query
+          required: true
+        - type: string
+          format: datetime
+          description: Start time of search
+          name: start
+          in: query
+          required: true
+        - type: string
+          format: datetime
+          description: End time of search
+          name: end
+          in: query
+          required: true
+      responses:
+        '200':
+          description: Successful operation
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/CurrencyHistory'
+              
+        '404':
+          description: Not found
+
+definitions:
+  Currency:
+    type: object
+    properties:
+      name:
+        type: string
+      pair:
+        type: string
+      symbol:
+        type: string
+        enum:
+          - USD
+          - BTC
+          - NZD
+      value:
+        type: number
+        format: float
+        x-nullable: true
+        
+  CurrencyMilestone:
+    type: object
+    properties:
+      at:
+        type: string
+        format: datetime
+      open:
+        type: number
+        format: float
+      close:
+        type: number
+        format: float
+      min:
+        type: number
+        format: float
+      max:
+        type: number
+        format: float
+        
+  CurrencyHistory:
+    type: object
+    properties:
+      history:
+        type: array
+        items:
+          $ref: '#/definitions/CurrencyMilestone'
+      pair:
+        type: string
+      period:
+        type: string
+        enum:
+          - '5'
+          - '15'
+          - '30'
+          - '60'
+          - '120'
+          - '720'
+          - 1D
+          - 1M
+          - 6M
+      symbol:
+        type: string
+        
+
