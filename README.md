@@ -12,16 +12,19 @@ Golang project for currency prices history persistence, targeting keep it using 
   - Answer random price for requested currency
   - No database connections
   - Optional, just need here to prove a point
+  - location: /preisgenerator
 
 ### Backgroung worker history builder
   - Invokes server price generator to get values operate
   - Persists price bases on 1 minute window
   - Process sequencial time windows using first currencies entry
   - Persists all data into Redis database.
+  - location: /zeitarbeiter
 
 ### RESTApi server price history provider
   - Answer history price for requested currency, according of time range
   - Reads prices data history from Redis database
+  - location: /preisviewer
 
   
 ### Execution
