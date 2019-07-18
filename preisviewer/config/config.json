@@ -1,0 +1,19 @@
+{
+  "runtime": {
+    "project": "preisviewer",
+    "port": 81,
+    "host": "0.0.0.0"
+  },
+  "database": {
+    "host": "localhost",
+    "port": "6379",
+    "database": "12"
+  },
+  "logger": {
+    "base_path": "/src/github.com/ildomm/preisviewer/log/",
+    "max_size": 100,
+    "max_backups": 3,
+    "max_age": 365,
+    "compress": true
+  }
+}
