@@ -1,3 +1,5 @@
+![Go Report Card](https://goreportcard.com/badge/github.com/ildomm/cc_sq_disbursement?cache=v1)
+
 # Eskalationszeit
 ![N|Solid](https://static.coindesk.com/wp-content/uploads/2014/05/coinstackrpricecharts.png)
 
